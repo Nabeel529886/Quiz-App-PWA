@@ -155,7 +155,6 @@ const App: React.FC = () => {
               :
               <button className="app__nextbtn" onClick={nextButton} disabled={select? false: true} ref={el => endnextbtn = el}>Next Question</button>
             }
-            {/* <button onClick={gameOver? handleEndQuiz : nextButton} disabled={select? false: true} className={gameOver?: "app__nextbtn"} ref={el => endnextbtn = el}>{gameOver? "End Quiz" : "Next Question"}</button> */}
           </div>
         }
         </div>
