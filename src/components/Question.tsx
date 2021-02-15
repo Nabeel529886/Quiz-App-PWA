@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { questiontype } from '../App'
-import {TimelineLite, TweenLite} from 'gsap'
+import {gsap,TimelineLite, TweenLite, CSSPlugin} from 'gsap'
 
+
+
+gsap.registerPlugin(CSSPlugin)
 
 const Question = ({question, setScore, score, select, setSelect, questNumber}: 
     {

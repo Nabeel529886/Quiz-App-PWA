@@ -394,8 +394,11 @@
     height: 200px
   }
   .app__scorehead{
-    font-size: 36px;
+    font-size: 27px;
     padding: 0px 5px
+  }
+  .app__scorehead__score{
+    margin-left: 12px;
   }
   .app__tryagainbtn{
     font-size: 20px;

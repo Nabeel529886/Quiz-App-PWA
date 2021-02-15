@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState} from 'react';
 import './App.css';
 import Question from './components/Question'
 import { fetchData } from './data/fetchData';
-import {TimelineLite} from 'gsap'
+import {gsap, TimelineLite, CSSPlugin} from 'gsap/all'
 import quiz from './assets/quiz.svg'
 import quizresult from './assets/quizresult.svg'
+import { configNotification } from './components/firebase'
+
+
+gsap.registerPlugin(CSSPlugin)
 
 
 export interface questiontype {
@@ -43,6 +47,8 @@ const App: React.FC = () => {
     setQuestNumber(0)
     setScore(0)
   }
+
+  configNotification()
 
   useEffect(() => {
     const tl_score = new TimelineLite({ paused: true })
